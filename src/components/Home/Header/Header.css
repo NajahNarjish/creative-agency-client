@@ -1,0 +1,9 @@
+.header-container{
+    /* height:700px; */
+    padding-bottom: 100px;
+    background-color: #FBD062;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
+
+}
+

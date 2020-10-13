@@ -1,0 +1,9 @@
+.headerBannerContainer p, h1 {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.headerBannerContainer h1 {
+    font-weight: bold;
+
+}
