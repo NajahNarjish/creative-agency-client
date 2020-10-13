@@ -8,7 +8,7 @@ import airbnb from "../../../images/logos/airbnb.png";
 const CustomerIcons = () => {
     return (
         <div className = "customerIcon container my-5 py-4">
-            <div className="row mb-5 pb-5">
+            <div className="row mb-5 pb-3">
                 <div className="col-6 col-md-2 offset-md-1 ">
                     <img className = " img-fluid w-75 pt-2" src={slack} alt="slack"/>
                 </div>
