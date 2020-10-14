@@ -1,0 +1,13 @@
+.work-container img{
+    height: 335px;
+    width: 465px;
+    object-fit: cover;
+}
+.slick-dots li button:before {
+    color: #C7C8C4;
+    font-size: 20px;
+    padding: 60px 0 10px ;
+  }
+  .slick-dots li.slick-active button:before {
+    color:#FBD062 !important;
+}
