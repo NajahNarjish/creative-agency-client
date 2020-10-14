@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  
 } from "react-router-dom";
 
 // import './App.css';
@@ -12,6 +12,7 @@ import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import NotFound from './components/NotFound/NotFound';
 import Login from './components/Login/Login/Login';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import OrderForm from './components/Dashboard/OrderForm/OrderForm';
 
 export const UserContext = createContext();
 
@@ -31,6 +32,9 @@ function App() {
           <PrivateRoute path = "/dashboard">
             <Dashboard></Dashboard>
           </PrivateRoute>
+          <Route  path = "/orderform">
+            <OrderForm></OrderForm>
+          </Route>
           
           <Route exact path = "/">
             <Home></Home>

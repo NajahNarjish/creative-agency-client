@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/logos/logo.png';
 import "./Navbar.css"
+import { UserContext } from '../../../App';
 
 const Navbar = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
     return (
         <section className = "container pt-3">
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -33,12 +36,12 @@ const Navbar = () => {
                         <Link className="nav-link mr-3"to="/login"><button class="btn btn-dark">Login</button></Link>
 
                         {/* {
-                            loggedInUser.email ? <button class="btn btn-primary" style = {{backgroundColor:"#F9A51A"}} onClick={() => setLoggedInUser({})}>Log out</button> :
-                            <Link to="/login"><button class="btn btn-primary" style = {{backgroundColor:"#F9A51A"}}>Login</button></Link>
-                        }  */}
+                            loggedInUser.email ? <button class="btn btn-dark"  onClick={() => setLoggedInUser({})}>Log out</button> :
+                            <Link to="/login"><button class="btn btn-dark" >Login</button></Link>
+                        }   */}
                     </li> 
                     <li class="nav-item">
-                        {/* <h6  className="nav-link mr-3"style = {{marginLeft:"5px"}}>{loggedInUser.displayName || loggedInUser.name}</h6> */}
+                        <h6  className="nav-link mr-3 mt-2"style = {{marginLeft:"5px"}}>{loggedInUser.displayName || loggedInUser.name}</h6>
                     </li> 
                     
                 </ul>
