@@ -4,7 +4,6 @@ import graficDesign from '../../../images/icons/service2.png';
 import webDev from '../../../images/icons/service3.png';
 import Service from "../../Home/Service/Service"
 
-
 const services = [ {icon: webDesign,
                     title: "Web & Mobile design",
                     description: "We craft stunning and amazing web UI, using a well drafted UX to fit your product."},
@@ -28,7 +27,6 @@ const Services = () => {
                     services.map(service => <Service service={service}></Service>)
                 }
             </div>
-
         </div>
     );
 };

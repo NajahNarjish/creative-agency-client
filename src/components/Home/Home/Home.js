@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import CustomerIcons from '../CustomerIcons/CustomerIcons';
 import Services from '../Services/Services';
 import Works from '../Works/Works';
+import Feedback from '../Feedback/Feedback';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <CustomerIcons/>
             <Services/>
             <Works/>
+            <Feedback/>
 
         </div>
     );
