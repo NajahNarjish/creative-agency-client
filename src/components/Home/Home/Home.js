@@ -4,6 +4,7 @@ import CustomerIcons from '../CustomerIcons/CustomerIcons';
 import Services from '../Services/Services';
 import Works from '../Works/Works';
 import Feedback from '../Feedback/Feedback';
+import Contact from '../Contact/Contact';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Services/>
             <Works/>
             <Feedback/>
+            <Contact/>
 
         </div>
     );
