@@ -13,6 +13,9 @@ import NotFound from './components/NotFound/NotFound';
 import Login from './components/Login/Login/Login';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import OrderForm from './components/Dashboard/OrderForm/OrderForm';
+import ServiceList from './components/Dashboard/ServiceList/ServiceList';
+import Review from './components/Dashboard/Review/Review';
+import AllServiceList from './components/Dashboard/AllServiceList/AllServiceList';
 
 export const UserContext = createContext();
 
@@ -35,6 +38,16 @@ function App() {
           <Route  path = "/orderform">
             <OrderForm></OrderForm>
           </Route>
+          <Route  path = "/servicelist">
+            <ServiceList></ServiceList>
+          </Route>
+          <Route  path = "/review">
+            <Review></Review>
+          </Route>
+          <Route  path = "/allServiceList">
+            <AllServiceList></AllServiceList>
+          </Route>
+          
           
           <Route exact path = "/">
             <Home></Home>

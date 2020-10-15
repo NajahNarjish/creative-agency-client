@@ -15,15 +15,21 @@ const Dashboard = () => {
                                 {/* <img src={volunteer} alt="volunteer" style={{ height: "20px" }}></img><span>Vol. register list</span> */}
                             </div>
                         </Link>
-                        <Link to="/">
+                        <Link to="/servicelist">
                             <div class="pt-5">
                                 <p>service list</p>
                                 {/* <img src={plus} alt="plus" style={{ height: "20px" }}></img><span>Add event</span> */}
                             </div>
                         </Link>
-                        <Link to="/">
+                        <Link to="/review">
                             <div class="pt-5">
                                 <p>review</p>
+                                {/* <img src={plus} alt="plus" style={{ height: "20px" }}></img><span>Add event</span> */}
+                            </div>
+                        </Link>
+                        <Link to="/allServiceList">
+                            <div class="pt-5">
+                                <p>All service list</p>
                                 {/* <img src={plus} alt="plus" style={{ height: "20px" }}></img><span>Add event</span> */}
                             </div>
                         </Link>
