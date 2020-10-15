@@ -16,6 +16,7 @@ import OrderForm from './components/Dashboard/OrderForm/OrderForm';
 import ServiceList from './components/Dashboard/ServiceList/ServiceList';
 import Review from './components/Dashboard/Review/Review';
 import AllServiceList from './components/Dashboard/AllServiceList/AllServiceList';
+import AdminAddService from './components/Dashboard/AdminAddService/AdminAddService';
 
 export const UserContext = createContext();
 
@@ -46,6 +47,9 @@ function App() {
           </Route>
           <Route  path = "/allServiceList">
             <AllServiceList></AllServiceList>
+          </Route>
+          <Route  path = "/adminAddService">
+            <AdminAddService></AdminAddService>
           </Route>
           
           

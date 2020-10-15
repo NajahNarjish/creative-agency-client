@@ -19,6 +19,7 @@ const OrderForm = () => {
         })
         
         // e.preventDefault();
+        alert("Order placed successfully")
         history.push("/servicelist");
     };
     return (

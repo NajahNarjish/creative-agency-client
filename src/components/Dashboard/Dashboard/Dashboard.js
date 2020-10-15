@@ -33,6 +33,12 @@ const Dashboard = () => {
                                 {/* <img src={plus} alt="plus" style={{ height: "20px" }}></img><span>Add event</span> */}
                             </div>
                         </Link>
+                        <Link to="/adminAddService">
+                            <div class="pt-5">
+                                <p>Add service</p>
+                                {/* <img src={plus} alt="plus" style={{ height: "20px" }}></img><span>Add event</span> */}
+                            </div>
+                        </Link>
                     </div>
                     <div class="col-lg-10 bg-light p-5">
                         <div class="bg-white">
