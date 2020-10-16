@@ -6,7 +6,7 @@ const Service = (props) => {
     const{icon, title, description} = props.service;
     const history = useHistory();
     return (
-        <div onClick = {() => history.push("/orderform")} className="col-6 col-md-4 mb-5 pb-5">
+        <div onClick = {() => history.push("/order")} className="col-6 col-md-4 mb-5 pb-5">
             {/* <Link to = "/orderform"> */}
                 <div className="service-card py-5">
                     <img src={icon} className ="img-fluid w-25 mx-auto d-block" alt="pic"/>

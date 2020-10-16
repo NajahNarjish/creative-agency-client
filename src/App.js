@@ -34,7 +34,7 @@ function App() {
           <Route path = "/login">
             <Login></Login>
           </Route>
-          <PrivateRoute path = "/dashboard">
+          <PrivateRoute path = "/order">
             <Dashboard></Dashboard>
           </PrivateRoute>
           {/* <Route  path = "/orderform">

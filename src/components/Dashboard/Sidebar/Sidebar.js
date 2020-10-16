@@ -30,13 +30,13 @@ const Sidebar = () => {
                         <img src="" alt=""/><span>Home</span>
                     </Link>
                 </li>
-                <li>
-                    <Link to="/dashboard" className="text-dark">
-                        <img src="" alt=""/> <span>Dashboard</span>
-                    </Link>
-                </li>
-                
-
+                {!isAdmin &&
+                 <div>
+                    <li>
+                        <Link to="/order" className="text-dark">
+                            <img src="" alt=""/> <span>Order</span>
+                        </Link>
+                    </li>
                     <li>
                         <Link to="/servicelist" className="text-dark">
                         <img src="" alt=""/> <span>Service List</span>
@@ -47,12 +47,14 @@ const Sidebar = () => {
                         <img src="" alt=""/><span>Review</span>
                         </Link>
                     </li>
+                </div>}
+
+                {isAdmin && 
+                <div>
                     <li>
-                        {isAdmin &&
-                            <Link to="/allServiceList" className="text-dark">
-                            <img src="" alt=""/> <span>All Service List</span>
-                            </Link>
-                        }
+                        <Link to="/allServiceList" className="text-dark">
+                        <img src="" alt=""/> <span>Service List</span>
+                        </Link>
                     </li>
                     <li>
                         <Link to="/adminAddService" className="text-dark" >
@@ -63,8 +65,8 @@ const Sidebar = () => {
                         <Link to="/makeAdmin" className="text-dark" >
                         <img src="" alt=""/> <span>Make Admin</span>
                         </Link>
-                    </li>
-                
+                    </li>  
+                </div>}      
             </ul>
             <div>
                 <Link to="/" className="text-dark"> <span>Logout</span></Link>
