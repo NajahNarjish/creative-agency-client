@@ -6,6 +6,7 @@ import { UserContext } from '../../../App';
 
 const Dashboard = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    
     return (
             <section>
                 <div className="row ">

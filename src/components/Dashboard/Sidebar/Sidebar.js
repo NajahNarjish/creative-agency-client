@@ -1,24 +1,41 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./Sidebar.css";
 import logo from '../../../images/logos/logo.png';
+import { UserContext } from '../../../App';
 
 const Sidebar = () => {
+    const [loggedInUser] = useContext(UserContext);
+    const [isAdmin, setIsAdmin] = useState(false);
+
+    useEffect(() => {
+        fetch("http://localhost:5000/isAdmin", {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({email:loggedInUser.email})
+        })
+        .then (res => res.json())
+        .then (data => setIsAdmin(data))
+    },[])
+
     return (
         <div className="sidebar  py-5 px-5" >
             <img src={logo} className = "img-fluid w-25 " alt= "logo"></img>
 
             <ul className="list-unstyled mt-5">
                 <li>
-                    <Link to="/dashboard" className="text-dark">
-                        <img src="" alt=""/> <span>Dashboard</span>
-                    </Link>
-                </li>
-                <li>
                     <Link to="/" className="text-dark">
                         <img src="" alt=""/><span>Home</span>
                     </Link>
                 </li>
+                <li>
+                    <Link to="/dashboard" className="text-dark">
+                        <img src="" alt=""/> <span>Dashboard</span>
+                    </Link>
+                </li>
+                
 
                     <li>
                         <Link to="/servicelist" className="text-dark">
@@ -31,9 +48,11 @@ const Sidebar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/allServiceList" className="text-dark">
-                        <img src="" alt=""/> <span>All Service List</span>
-                        </Link>
+                        {isAdmin &&
+                            <Link to="/allServiceList" className="text-dark">
+                            <img src="" alt=""/> <span>All Service List</span>
+                            </Link>
+                        }
                     </li>
                     <li>
                         <Link to="/adminAddService" className="text-dark" >
@@ -41,8 +60,8 @@ const Sidebar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/doctor/setting" className="text-dark" >
-                        <img src="" alt=""/> <span>Settings</span>
+                        <Link to="/makeAdmin" className="text-dark" >
+                        <img src="" alt=""/> <span>Make Admin</span>
                         </Link>
                     </li>
                 
