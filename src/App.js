@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,6 +24,7 @@ export const UserContext = createContext();
 function App() {
 
   const [loggedInUser, setLoggedInUser] = useState({});
+  
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}> 
       <Router>

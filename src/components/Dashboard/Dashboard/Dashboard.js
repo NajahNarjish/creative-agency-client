@@ -5,7 +5,7 @@ import { UserContext } from '../../../App';
 
 
 const Dashboard = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser] = useContext(UserContext);
     
     return (
             <section>
@@ -16,9 +16,9 @@ const Dashboard = () => {
                     <div className="col-md-10 ">
                         <div className="d-flex justify-content-between">
                             <h3 class="mt-5 mb-4">Place Your Order Here</h3>
-                            <h6  className="m-5"style = {{marginLeft:"5px"}}>{loggedInUser.displayName || loggedInUser.name}Login</h6>
+                            <h6 className="m-5"style = {{marginLeft:"5px"}}>{loggedInUser.displayName || loggedInUser.name}Login</h6>
                         </div>
-                        <OrderForm/>     
+                        <OrderForm/>    
                     </div>  
                 </div>
             </section>

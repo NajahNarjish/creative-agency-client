@@ -30,13 +30,13 @@ const Sidebar = () => {
                         <img src="" alt=""/><span>Home</span>
                     </Link>
                 </li>
+                <li>
+                    <Link to="/order" className="text-dark">
+                        <img src="" alt=""/> <span>Order</span>
+                    </Link>
+                </li>
                 {!isAdmin &&
                  <div>
-                    <li>
-                        <Link to="/order" className="text-dark">
-                            <img src="" alt=""/> <span>Order</span>
-                        </Link>
-                    </li>
                     <li>
                         <Link to="/servicelist" className="text-dark">
                         <img src="" alt=""/> <span>Service List</span>
