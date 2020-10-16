@@ -36,9 +36,9 @@ function App() {
           <PrivateRoute path = "/dashboard">
             <Dashboard></Dashboard>
           </PrivateRoute>
-          <Route  path = "/orderform">
+          {/* <Route  path = "/orderform">
             <OrderForm></OrderForm>
-          </Route>
+          </Route> up down two are PRoutes*/}
           <Route  path = "/servicelist">
             <ServiceList></ServiceList>
           </Route>
