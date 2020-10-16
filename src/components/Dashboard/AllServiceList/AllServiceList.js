@@ -8,7 +8,7 @@ const AllServiceList = () => {
     const [allServiceList, setAllServiceList] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/showAllServiceList")
+        fetch("https://secret-escarpment-44361.herokuapp.com/showAllServiceList")
             .then(res => res.json())
             .then(data => setAllServiceList(data))
     }, [])
@@ -22,7 +22,7 @@ const AllServiceList = () => {
                 <div className="col-md-10 ">
                     <div className="d-flex justify-content-between">
                         <h3 class="mt-5 mb-4">All Services List</h3>
-                        <h6 className="m-5" style={{ marginLeft: "5px" }}>{loggedInUser.displayName || loggedInUser.name}Login</h6>
+                        <h6 className="m-5" style={{ marginLeft: "5px" }}>{loggedInUser.displayName || loggedInUser.name}</h6>
                     </div>
                     <div className="bg-light row" style={{ height: "100vh" }}> 
                             <table class="table table-striped bg-white m-5">

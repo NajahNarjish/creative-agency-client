@@ -3,7 +3,6 @@ import Sidebar from '../Sidebar/Sidebar';
 import OrderForm from '../OrderForm/OrderForm';
 import { UserContext } from '../../../App';
 
-
 const Dashboard = () => {
     const [loggedInUser] = useContext(UserContext);
     
@@ -16,13 +15,12 @@ const Dashboard = () => {
                     <div className="col-md-10 ">
                         <div className="d-flex justify-content-between">
                             <h3 class="mt-5 mb-4">Place Your Order Here</h3>
-                            <h6 className="m-5"style = {{marginLeft:"5px"}}>{loggedInUser.displayName || loggedInUser.name}Login</h6>
+                            <h6 className="m-5"style = {{marginLeft:"5px"}}>{loggedInUser.displayName || loggedInUser.name}</h6>
                         </div>
                         <OrderForm/>    
                     </div>  
                 </div>
-            </section>
-        
+            </section>  
     );
 };
 

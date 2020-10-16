@@ -88,11 +88,6 @@ const Login = () => {
                     <div className='login-form'>
                         <h1>Login with</h1>
 
-                        {/* <button className='googleButton' onClick={handleGoogleSignIn}>
-                            <img src={google} style={{ width: "10%" }} alt="" />
-                            <span style={{ paddingLeft: "10px" }}>Continue with Google</span>
-                        </button> */}
-                        
                         {
                             user.isSignedIn ? <button onClick={handleSignOut}>Sign out from google</button> :
                                 <button className='googleButton' onClick={handleGoogleSignIn}>

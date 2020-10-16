@@ -27,10 +27,7 @@ const Navbar = () => {
                         <Link className="nav-link mr-3" to="/">Our Portfolio</Link>
                     </li>
                     <li class="nav-item ">
-                        {/* {
-                            loggedInUser.email ? <button class="btn btn-dark"  onClick={() => setLoggedInUser({})}>Log out</button> :
-                            <Link to="/login"><button class="btn btn-dark" >Login</button></Link>
-                        }   */}
+                        
                         <Link className="nav-link mr-3" to="/order">Dashboard</Link>
                     </li>
                     <li class="nav-item ">

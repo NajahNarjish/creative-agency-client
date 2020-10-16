@@ -1,15 +1,8 @@
 import React from 'react';
 
 const ServicePerPerson = (props) => {
-    const { name, email, serviceName,  detail, _id, status } = props.service;
-    // const deleteRegistration = () => {
-    //     fetch(("https://tranquil-reef-85303.herokuapp.com/delete/" + _id), {
-    //         method: 'DELETE'
-    //     })
-    //     console.log("deleted");
-                 
-    // }
-
+    const { name, email, serviceName,  detail,  status } = props.service;
+    
     return (
         <tr>
             <td>{name}</td>

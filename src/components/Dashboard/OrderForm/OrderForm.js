@@ -4,13 +4,13 @@ import { UserContext } from '../../../App';
 import { useHistory } from 'react-router-dom';
 
 const OrderForm = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser] = useContext(UserContext);
     const { register, handleSubmit, errors } = useForm();
     const history = useHistory();
 
     const onSubmit = data => {
         const orderDetail = { ...loggedInUser, ...data };
-        fetch("http://localhost:5000/addOrder", {
+        fetch("https://secret-escarpment-44361.herokuapp.com/addOrder", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -18,7 +18,6 @@ const OrderForm = () => {
             body: JSON.stringify(orderDetail)
         })
 
-        // e.preventDefault();
         alert("Order placed successfully")
         history.push("/servicelist");
     };

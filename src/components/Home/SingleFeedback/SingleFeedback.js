@@ -2,7 +2,7 @@ import React from 'react';
 import "./SingleFeedback.css"
 
 const SingleFeedback = (props) => {
-    // const { picture, name, designation, description } = props.feedback;
+   
     const { photo, reviewerName, detail, description } = props.feedback;
 
     return (

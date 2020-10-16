@@ -11,7 +11,7 @@ const MakeAdmin = () => {
 
     const onSubmit = data => {
         const  adminEmail= data;
-        fetch("http://localhost:5000/addAdmin", {
+        fetch("https://secret-escarpment-44361.herokuapp.com/addAdmin", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -19,7 +19,6 @@ const MakeAdmin = () => {
             body: JSON.stringify(adminEmail)
         })
 
-        // e.preventDefault();
         alert("Review posted successfully");
         history.push("/");
     };
@@ -32,7 +31,7 @@ const MakeAdmin = () => {
                 <div className="col-md-10 ">
                     <div className="d-flex justify-content-between">
                         <h3 class="mt-5 mb-4">Make an Admin</h3>
-                        <h6 className="m-5" style={{ marginLeft: "5px" }}>{loggedInUser.displayName || loggedInUser.name}Login</h6>
+                        <h6 className="m-5" style={{ marginLeft: "5px" }}>{loggedInUser.displayName || loggedInUser.name}</h6>
                     </div>
 
                     <div className="bg-light p-5 " style={{ height: "100vh" }}>

@@ -11,7 +11,7 @@ const Review = () => {
 
     const onSubmit = data => {
         const reviewDetail = { ...loggedInUser, ...data };
-        fetch("http://localhost:5000/addReview", {
+        fetch("https://secret-escarpment-44361.herokuapp.com/addReview", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -19,7 +19,6 @@ const Review = () => {
             body: JSON.stringify(reviewDetail)
         })
 
-        // e.preventDefault();
         alert("Review posted successfully");
         history.push("/");
     };
@@ -32,7 +31,7 @@ const Review = () => {
                 <div className="col-md-10 ">
                     <div className="d-flex justify-content-between">
                         <h3 class="mt-5 mb-4">Please put your review here</h3>
-                        <h6 className="m-5" style={{ marginLeft: "5px" }}>{loggedInUser.displayName || loggedInUser.name}Login</h6>
+                        <h6 className="m-5" style={{ marginLeft: "5px" }}>{loggedInUser.displayName || loggedInUser.name}</h6>
                     </div>
                     <div className="bg-light row" style={{ height: "100vh" }}>
                         <div className="col-md-7 ml-4 mt-5 pt-2">
@@ -57,9 +56,6 @@ const Review = () => {
                 </div>
             </div>
         </section>
-
-
-
     );
 };
 

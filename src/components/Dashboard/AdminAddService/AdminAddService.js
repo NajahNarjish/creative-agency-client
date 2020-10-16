@@ -20,12 +20,12 @@ const AdminAddService = () => {
 
     const handleSubmit = () => {
         const formData = new FormData()
-        // console.log(info);
+        
         formData.append('file', file);
         formData.append('title', info.title);
         formData.append('description', info.description);
 
-        fetch('http://localhost:5000/addAService', {
+        fetch('https://secret-escarpment-44361.herokuapp.com/addAService', {
             method: 'POST',
             body: formData
         })
@@ -46,7 +46,7 @@ const AdminAddService = () => {
                 <div className="col-md-10 ">
                     <div className="d-flex justify-content-between">
                         <h3 class="mt-5 mb-4">Add a Service</h3>
-                        <h6 className="m-5" style={{ marginLeft: "5px" }}>{loggedInUser.displayName || loggedInUser.name}Login</h6>
+                        <h6 className="m-5" style={{ marginLeft: "5px" }}>{loggedInUser.displayName || loggedInUser.name}</h6>
                     </div>
 
                     <div className="bg-light p-5 " style={{ height: "100vh" }}>
