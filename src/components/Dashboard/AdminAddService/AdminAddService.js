@@ -7,6 +7,7 @@ const AdminAddService = () => {
     const [info, setInfo] = useState({});
     const [file, setFile] = useState(null);
     const handleFileChange = (e) => {
+        console.log("image added");
         const newFile = e.target.files[0];
         setFile(newFile);
     }
@@ -66,7 +67,7 @@ const AdminAddService = () => {
                                     <div class="input-group">
                                         <label class="input-group-btn">
                                             <span style = {{backgroundColor: '#DEFFED'}}class="btn btn-outline-success ">
-                                                Upload image <input type="file" style={{display: "none"}} multiple/>
+                                                Upload image <input  onChange={handleFileChange} type="file" style={{display: "none"}} multiple/>
                                             </span>
                                         </label>   
                                     </div>
