@@ -37,17 +37,14 @@ const Navbar = () => {
                         <Link className="nav-link mr-3" to="/">Contact Us</Link>
                     </li>
                     <li class="nav-item">
-                        <Link className="nav-link mr-3"to="/login"><button class="btn btn-dark">Login</button></Link>
-
-                        {/* {
-                            loggedInUser.email ? <button class="btn btn-dark"  onClick={() => setLoggedInUser({})}>Log out</button> :
+                        {
+                            loggedInUser.email ? <button class="btn btn-dark"  onClick={() => {setLoggedInUser({}); sessionStorage.clear()} } >Log out</button> :
                             <Link to="/login"><button class="btn btn-dark" >Login</button></Link>
-                        }   */}
+                        }  
                     </li> 
                     <li class="nav-item">
                         <h6  className="nav-link mr-3 mt-2"style = {{marginLeft:"5px"}}>{loggedInUser.displayName || loggedInUser.name}</h6>
                     </li> 
-                    
                 </ul>
             </div>
         </nav>

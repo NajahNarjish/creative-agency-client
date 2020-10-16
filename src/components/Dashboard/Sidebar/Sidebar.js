@@ -5,7 +5,7 @@ import logo from '../../../images/logos/logo.png';
 import { UserContext } from '../../../App';
 
 const Sidebar = () => {
-    const [loggedInUser] = useContext(UserContext);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
@@ -69,7 +69,7 @@ const Sidebar = () => {
                 </div>}      
             </ul>
             <div>
-                <Link to="/" className="text-dark"> <span>Logout</span></Link>
+                <Link to="/" onClick={() => {setLoggedInUser({}); sessionStorage.clear()} } className="text-dark"> <span>Logout</span></Link>
             </div>
         </div>        
     );

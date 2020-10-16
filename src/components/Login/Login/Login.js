@@ -58,24 +58,26 @@ const Login = () => {
                 console.log(err.message);
             })
     }
-    // const handleSignOut = () => {
-    //     firebase.auth().signOut()
-    //         .then(res => {
-    //             const signedOutUser = {
-    //                 isSignedIn: false,
-    //                 name: '',
-    //                 photo: '',
-    //                 email: '',
-    //                 password: '',
-    //                 error: '',
-    //                 success: false
-    //             }
-    //             setUser(signedOutUser);
+    const handleSignOut = () => {
+        firebase.auth().signOut()
+            .then(res => {
+                const signedOutUser = {
+                    isSignedIn: false,
+                    name: '',
+                    photo: '',
+                    email: '',
+                    password: '',
+                    error: '',
+                    success: false
+                }
+                    sessionStorage.clear()
+                setUser(signedOutUser);
 
-    //         })
-    //         .catch(err => {
-    //         })
-    // }
+
+            })
+            .catch(err => {
+            })
+    }
 
     return (
         <div class="container">
@@ -86,18 +88,18 @@ const Login = () => {
                     <div className='login-form'>
                         <h1>Login with</h1>
 
-                        <button className='googleButton' onClick={handleGoogleSignIn}>
+                        {/* <button className='googleButton' onClick={handleGoogleSignIn}>
                             <img src={google} style={{ width: "10%" }} alt="" />
                             <span style={{ paddingLeft: "10px" }}>Continue with Google</span>
-                        </button>
+                        </button> */}
                         
-                        {/* {
+                        {
                             user.isSignedIn ? <button onClick={handleSignOut}>Sign out from google</button> :
                                 <button className='googleButton' onClick={handleGoogleSignIn}>
                                     <img src={google} style={{ width: "10%" }} alt="" />
                                     <span style={{ paddingLeft: "10px" }}>Continue with Google</span>
                                 </button>
-                        } */}
+                        }
 
                         <p className = 'mt-3'>Don't have an account?<span><Link to ="/login" style={{ color: "green" }}> Create an account</Link></span></p>
                     </div>
